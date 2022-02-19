@@ -13,9 +13,4 @@ public class ColorManager : MonoBehaviour
 
         getGlobalColor = Color.white;
     }
-
-    private void Update()
-    {
-        print(getGlobalColor);
-    }
 }

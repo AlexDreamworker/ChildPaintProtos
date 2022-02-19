@@ -15,4 +15,5 @@ public class ColorSprite : MonoBehaviour
     {
         rend.color = ColorManager.COLOR.getGlobalColor;
     }
+
 }
