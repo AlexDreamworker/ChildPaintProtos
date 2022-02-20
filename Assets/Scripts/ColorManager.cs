@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ColorManager : MonoBehaviour
 {
-    static public ColorManager COLOR;
-    [HideInInspector] public Color getGlobalColor;
+    static public ColorManager S;
+    [HideInInspector] public Color globalColor;
 
     private void Awake()
     {
-        COLOR = this;
+        S = this;
 
-        getGlobalColor = Color.white;
+        globalColor = Color.white;
     }
 }

@@ -13,7 +13,7 @@ public class ColorSprite : MonoBehaviour
 
     void OnMouseDown()
     {
-        rend.color = ColorManager.COLOR.getGlobalColor;
+        rend.color = ColorManager.S.globalColor;
     }
 
 }

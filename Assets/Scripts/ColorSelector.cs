@@ -8,6 +8,6 @@ public class ColorSelector : MonoBehaviour
 
     public void ColorSelecting() 
     {
-        ColorManager.COLOR.getGlobalColor = colorChangeButton;
+        ColorManager.S.globalColor = colorChangeButton;
     }
 }
