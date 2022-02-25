@@ -9,39 +9,63 @@ public class FrameSelector : MonoBehaviour
 
     public Text count, size;
 
-    [HideInInspector] public int elementsOfFrames = 0;
-    [HideInInspector] public int sizeOfFrames;
+    private int elementsOfFrames = 0;
+    private int sizeOfFrames, lenForScroll;
 
     private GameObject currentFrame;
 
     private void Awake()
     {
         sizeOfFrames = frames.Length;
+        lenForScroll = sizeOfFrames - 1;
+        FrameChanger();
     }
  
     private void Update()
     {
-        count.text = (elementsOfFrames + 1).ToString();
-        size.text = sizeOfFrames.ToString();
+        PlayerInputHandler();
+    }
 
+    public void NextFrame() 
+    {
+        if (elementsOfFrames < lenForScroll) 
+            elementsOfFrames++;
+        if (elementsOfFrames > lenForScroll) 
+            elementsOfFrames = lenForScroll;
+
+        FrameChanger();
+    }
+
+    public void PreviousFrame() 
+    {
+        if (elementsOfFrames > 0) 
+            elementsOfFrames--;
+        if (elementsOfFrames < 0) 
+            elementsOfFrames = 0;
+
+        FrameChanger();
+    }
+
+    private void FrameChanger() 
+    {
         for (int el = 0; el < sizeOfFrames; el++) 
         {
             frames[el].SetActive(false);
         }
+
         currentFrame = frames[elementsOfFrames];
         currentFrame.SetActive(true);
 
-        int lenForScroll = frames.Length-1;
+        count.text = (elementsOfFrames + 1).ToString();
+        size.text = sizeOfFrames.ToString();
+    }
 
-        if (Input.mouseScrollDelta.y > 0 && elementsOfFrames < lenForScroll) 
-            elementsOfFrames++;
-        if (elementsOfFrames > lenForScroll) 
-            elementsOfFrames = lenForScroll;
-            
-        if (Input.mouseScrollDelta.y < 0 && elementsOfFrames > 0) 
-            elementsOfFrames--;
-        if (elementsOfFrames < 0) 
-            elementsOfFrames = 0;
+    private void PlayerInputHandler() 
+    {
+        if (Input.mouseScrollDelta.y > 0)
+            NextFrame();
+        if (Input.mouseScrollDelta.y < 0)
+            PreviousFrame();
     }
 
 }

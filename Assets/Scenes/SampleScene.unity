@@ -182,7 +182,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &57251479
 RectTransform:
   m_ObjectHideFlags: 0
@@ -245,7 +245,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 57251481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1529536428}
+        m_TargetAssemblyTypeName: FrameSelector, Assembly-CSharp
+        m_MethodName: PreviousFrame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &57251481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9747,8 +9759,6 @@ MonoBehaviour:
   - {fileID: 643417015}
   count: {fileID: 1058058253}
   size: {fileID: 1680528517}
-  elementsOfFrames: 0
-  sizeOfFrames: 0
 --- !u!1 &1566008947
 GameObject:
   m_ObjectHideFlags: 0
@@ -12545,7 +12555,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1959591201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12608,7 +12618,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1959591203}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1529536428}
+        m_TargetAssemblyTypeName: FrameSelector, Assembly-CSharp
+        m_MethodName: NextFrame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1959591203
 MonoBehaviour:
   m_ObjectHideFlags: 0
