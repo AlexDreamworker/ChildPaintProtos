@@ -23,4 +23,5 @@ public class FrameChange : MonoBehaviour
     {
         Application.Quit();
     }
+    
 }

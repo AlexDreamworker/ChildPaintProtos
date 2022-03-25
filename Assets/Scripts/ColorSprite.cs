@@ -15,5 +15,4 @@ public class ColorSprite : MonoBehaviour
     {
         rend.color = ColorManager.S.globalColor;
     }
-
 }

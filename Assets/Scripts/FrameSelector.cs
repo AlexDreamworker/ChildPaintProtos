@@ -10,6 +10,7 @@ public class FrameSelector : MonoBehaviour
     public Text count, size;
 
     private int elementsOfFrames = 0;
+
     private int sizeOfFrames, lenForScroll;
 
     private GameObject currentFrame;
@@ -67,5 +68,4 @@ public class FrameSelector : MonoBehaviour
         if (Input.mouseScrollDelta.y < 0)
             PreviousFrame();
     }
-
 }
